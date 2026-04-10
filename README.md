@@ -1,6 +1,7 @@
 # 🚕 Chicago Urban Mobility Pattern Analysis Using Satellite Imagery,Taxi-Data and ML
 This project analyzes urban mobility patterns in Chicago by combining satellite imagery (Sentinel-2), OpenStreetMap road data, population density, business licenses/POI data, and a large Chicago taxi dataset (~14 million trips in 2024–early 2026).
 
+
 ---
 Dashboard Preview
 
@@ -65,11 +66,11 @@ Data loading, CRS alignment, clipping Sentinel-2 to Chicago boundary
 
 *4. Key Findings*
 
-- Destination-Driven Demand
-- 
+- Destination-Driven Demand:
+
   Taxi trips in Chicago are strongly driven by destinations rather than the residential population. Number of hotels emerged as the strongest predictor, followed by airport presence and proximity to the Loop.
-- Limited Value of Sentinel-2 at 10m
-- 
+- Limited Value of Sentinel-2 at 10m:
+  
   The vehicle density proxy derived from texture analysis added very little predictive power once destination-based features were included. This highlights the resolution limitation of Sentinel-2 for fine-grained vehicle detection in urban environments.
   
 - Spatial Patterns
