@@ -97,8 +97,8 @@ POI data relies on business licenses (may not capture all tourist/commercial act
 
 8. Recommendations for Future Work
 
-Incorporate higher-resolution imagery (Planet Labs or aerial) for improved vehicle detection
-Add more specific POI types (universities, stadiums, convention centers, tourist attractions)
-Develop true multi-step temporal forecasting using LSTM or Transformer models
-Integrate real-time or multi-date Sentinel data for dynamic congestion monitoring
-Expand the analysis to other major cities for comparative insights
+- Incorporate higher-resolution imagery (Planet Labs or aerial) for improved vehicle detection
+- Add more specific POI types (universities, stadiums, convention centers, tourist attractions)
+- Develop true multi-step temporal forecasting using LSTM or Transformer models
+- Integrate real-time or multi-date Sentinel data for dynamic congestion monitoring
+- Expand the analysis to other major cities for comparative insights
