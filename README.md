@@ -7,7 +7,10 @@ Dashboard Preview
 <p align="center">
   <img src="https://github.com/frankraDIUM/Chicago-Urban-Mobility-Pattern-Analysis-Using-Satellite-Imagery-Taxi-Data-and-ML/blob/main/mobility_analysis_.gif" />
 </p>
+
 ---
+
+
 
 
 1. Objectives
