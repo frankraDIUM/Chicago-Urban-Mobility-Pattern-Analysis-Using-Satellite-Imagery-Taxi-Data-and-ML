@@ -36,67 +36,69 @@ Dashboard Preview
 **Phase 1: Setup & Exploration**
 
 Environment setup with geospatial stack (GeoPandas, Rasterio, Pyrosm/OSMnx)
+
 Data loading, CRS alignment, clipping Sentinel-2 to Chicago boundary
 
 
 **Phase 2: Satellite Processing**
 
-Road mask creation (20m buffer around major OSM roads)
-Vehicle density proxy using texture analysis (GLCM Contrast + NDVI)
-Refined proxy with multi-band features
+- Road mask creation (20m buffer around major OSM roads)
+- Vehicle density proxy using texture analysis (GLCM Contrast + NDVI)
+- Refined proxy with multi-band features
 
 
 **Phase 3: Hybrid Analysis**
-Community-area aggregation of taxi trips
-Integration of population density and business/POI counts
-Hotspot analysis using Getis-Ord Gi*
+- Community-area aggregation of taxi trips
+- Integration of population density and business/POI counts
+- Hotspot analysis using Getis-Ord Gi*
 
 **Phase 4: Modeling & Dashboard**
 
-Static regression model (R² ≈ 0.666) using hotels, airport flag, distance to Loop, and POI counts
-Temporal model (hourly prediction): R² = 0.954, MAE = 294 trips
-Interactive Streamlit dashboard with maps, residuals, and prediction tool
+- Static regression model (R² ≈ 0.666) using hotels, airport flag, distance to Loop, and POI counts
+- Temporal model (hourly prediction): R² = 0.954, MAE = 294 trips
+- Interactive Streamlit dashboard with maps, residuals, and prediction tool
 
 **Phase 5–6: Advanced Analysis**
 
-Residual analysis to identify hidden hotspots (O’Hare, Near North Side) and over-predicted areas (far South Side)
-Feature engineering including hotel_airport_interaction, dist_to_ohare_km, centrality, and south_side_flag
+- Residual analysis to identify hidden hotspots (O’Hare, Near North Side) and over-predicted areas (far South Side)
+- Feature engineering including hotel_airport_interaction, dist_to_ohare_km, centrality, and south_side_flag
 
 *4. Key Findings*
 
-Destination-Driven Demand
-Taxi trips in Chicago are strongly driven by destinations rather than the residential population. Number of hotels emerged as the strongest predictor, followed by airport presence and proximity to the Loop.
-Limited Value of Sentinel-2 at 10m
-The vehicle density proxy derived from texture analysis added very little predictive power once destination-based features were included. This highlights the resolution limitation of Sentinel-2 for fine-grained vehicle detection in urban environments.
-Spatial Patterns
-Strong hotspots in Loop and Near North Side
-Significant under-prediction at O’Hare Airport
-Systematic over-prediction in many far South Side community areas
+- Destination-Driven Demand
+  Taxi trips in Chicago are strongly driven by destinations rather than the residential population. Number of hotels emerged as the strongest predictor, followed by airport presence and proximity to the Loop.
+- Limited Value of Sentinel-2 at 10m
+  The vehicle density proxy derived from texture analysis added very little predictive power once destination-based features were included. This highlights the resolution limitation of Sentinel-2 for fine-grained vehicle detection in urban environments.
+  
+- Spatial Patterns
+  Strong hotspots in Loop and Near North Side.
+  Significant under-prediction at O’Hare Airport.
+  Systematic over-prediction in many far South Side community areas.
 
-Temporal Patterns
-Clear afternoon/evening peak with highest demand at 5 PM (17:00)
-Strong weekday vs weekend differences
+- Temporal Patterns
+  Clear afternoon/evening peak with highest demand at 5 PM (17:00).
+  Strong weekday vs weekend differences.
 
 
 *5. Model Performance*
 
-Static Community-Area Model: R² ≈ 0.666, MAE ≈ 50,806 trips
-Temporal Hourly Model: R² = 0.954, MAE = 294 trips
+- Static Community-Area Model: R² ≈ 0.666, MAE ≈ 50,806 trips
+- Temporal Hourly Model: R² = 0.954, MAE = 294 trips
 
 *6. Interactive Dashboard*
 A Streamlit dashboard was developed featuring:
 
-Toggleable choropleth maps with custom boxed legends
-Residual analysis map highlighting hidden hotspots
-Temporal prediction tool (select community area + hour + weekend flag)
-Model performance and feature importance visualization
+- Toggleable choropleth maps with custom boxed legends
+- Residual analysis map highlighting hidden hotspots
+- Temporal prediction tool (select community area + hour + weekend flag)
+- Model performance and feature importance visualization
 
 *7. Limitations*
 
-Sentinel-2 10m resolution is insufficient for accurate individual vehicle counting
-Single-date satellite imagery limits temporal satellite analysis
-Some South Side over-prediction suggests missing socio-economic or transit accessibility features
-POI data relies on business licenses (may not capture all tourist/commercial activity)
+- Sentinel-2 10m resolution is insufficient for accurate individual vehicle counting
+- Single-date satellite imagery limits temporal satellite analysis
+- Some South Side over-prediction suggests missing socio-economic or transit accessibility features
+- POI data relies on business licenses (may not capture all tourist/commercial activity)
 
 *8. Future Work*
 
