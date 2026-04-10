@@ -36,9 +36,9 @@ Dashboard Preview
 
 **Phase 1: Setup & Exploration**
 
-Environment setup with geospatial stack (GeoPandas, Rasterio, Pyrosm/OSMnx)
+- Environment setup with geospatial stack (GeoPandas, Rasterio, Pyrosm/OSMnx)
 
-Data loading, CRS alignment, clipping Sentinel-2 to Chicago boundary
+- Data loading, CRS alignment, clipping Sentinel-2 to Chicago boundary
 
 
 **Phase 2: Satellite Processing**
@@ -94,6 +94,7 @@ Data loading, CRS alignment, clipping Sentinel-2 to Chicago boundary
 - Temporal Hourly Model: R² = 0.954, MAE = 294 trips
 
 *6. Interactive Dashboard*
+
 A Streamlit dashboard was developed featuring:
 
 - Toggleable choropleth maps with custom boxed legends
