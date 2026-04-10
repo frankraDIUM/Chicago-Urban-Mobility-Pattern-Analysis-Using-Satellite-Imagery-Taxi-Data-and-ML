@@ -66,17 +66,24 @@ Data loading, CRS alignment, clipping Sentinel-2 to Chicago boundary
 *4. Key Findings*
 
 - Destination-Driven Demand
+- 
   Taxi trips in Chicago are strongly driven by destinations rather than the residential population. Number of hotels emerged as the strongest predictor, followed by airport presence and proximity to the Loop.
 - Limited Value of Sentinel-2 at 10m
+- 
   The vehicle density proxy derived from texture analysis added very little predictive power once destination-based features were included. This highlights the resolution limitation of Sentinel-2 for fine-grained vehicle detection in urban environments.
   
 - Spatial Patterns
+  
   Strong hotspots in Loop and Near North Side.
+  
   Significant under-prediction at O’Hare Airport.
+  
   Systematic over-prediction in many far South Side community areas.
 
 - Temporal Patterns
+  
   Clear afternoon/evening peak with highest demand at 5 PM (17:00).
+  
   Strong weekday vs weekend differences.
 
 
