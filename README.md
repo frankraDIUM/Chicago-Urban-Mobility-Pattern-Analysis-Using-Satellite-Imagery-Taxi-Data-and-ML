@@ -1,6 +1,12 @@
 # 🚕 Chicago Urban Mobility Pattern Analysis Using Satellite Imagery,Taxi-Data and ML
 This project analyzes urban mobility patterns in Chicago by combining satellite imagery (Sentinel-2), OpenStreetMap road data, population density, business licenses/POI data, and a large Chicago taxi dataset (~14 million trips in 2024–early 2026).
 
+Dashbord Preview
+
+<p align="center">
+  <img src="https://github.com/frankraDIUM/Chicago-Urban-Mobility-Pattern-Analysis-Using-Satellite-Imagery-Taxi-Data-and-ML/blob/main/mobility_analysis_.gif" />
+</p>
+
 1. Objectives
 
 Detect and quantify vehicle density proxies from Sentinel-2 imagery
